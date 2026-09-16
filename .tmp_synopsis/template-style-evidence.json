@@ -1,0 +1,151 @@
+{
+  "input": "C:\\Users\\Saksham\\Downloads\\Front End Web Development synopsis format.docx",
+  "fonts_by_char_count": {
+    "Times New Roman": 2121,
+    "MS Gothic": 10
+  },
+  "direct_run_formatting_runs": 111,
+  "direct_paragraph_formatting_paragraphs": 83,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 26,
+      "text": "e",
+      "style": "Normal"
+    },
+    {
+      "para_index": 30,
+      "text": "\u27a4 Contents",
+      "style": "Normal"
+    },
+    {
+      "para_index": 37,
+      "text": "Analysis Phase",
+      "style": "Normal"
+    },
+    {
+      "para_index": 46,
+      "text": "\u27a4 Abstract",
+      "style": "Normal"
+    },
+    {
+      "para_index": 49,
+      "text": "\u27a4 Motivation",
+      "style": "Normal"
+    },
+    {
+      "para_index": 55,
+      "text": "\u27a4 Introduction",
+      "style": "Normal"
+    },
+    {
+      "para_index": 61,
+      "text": "Objectives",
+      "style": "Normal"
+    },
+    {
+      "para_index": 62,
+      "text": "Future Scope",
+      "style": "Normal"
+    },
+    {
+      "para_index": 63,
+      "text": "Findings",
+      "style": "Normal"
+    },
+    {
+      "para_index": 65,
+      "text": "\u27a4 Analysis Phase",
+      "style": "Normal"
+    },
+    {
+      "para_index": 70,
+      "text": "\u27a4 Technology Stack (Web Development)",
+      "style": "Normal"
+    },
+    {
+      "para_index": 77,
+      "text": "\u27a4 System Design & Methodology",
+      "style": "Normal"
+    },
+    {
+      "para_index": 80,
+      "text": "\u27a4 Expected Outcomes",
+      "style": "Normal"
+    },
+    {
+      "para_index": 85,
+      "text": "\u27a4 References",
+      "style": "Normal"
+    },
+    {
+      "para_index": 89,
+      "text": "Section",
+      "style": "Normal"
+    },
+    {
+      "para_index": 90,
+      "text": "Page",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 2,
+        "text": "A\nSYNOPSIS REPORT OF PROJECT (14pt. bold)",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "text": "(Project Name) (12pt.)\nFor the course FRONT END WEB DEVELOPMENT (26CA205PCB) (12pt.)\nIn partial fulfillment of requireme",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "text": "SUBMITTED BY:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 5,
+        "text": "(Name of student & Roll no.) (14pt)",
+        "style": "Normal"
+      },
+      {
+        "para_index": 6,
+        "text": "August 2026",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 2,
+        "run_text": "A",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "run_text": "\n",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "run_text": "SYNOPSIS REPORT OF PROJECT",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "run_text": " ",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "run_text": "(14pt. bold)",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

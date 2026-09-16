@@ -1,0 +1,42 @@
+image: mcr.microsoft.com/playwright:v1.51.1-noble
+stages: [verify, deploy]
+verify-frontend:
+  stage: verify
+  timeout: 15 minutes
+  script:
+    - npm install --no-audit --no-fund
+    - npm test
+    - npm run build
+    - npm run preview > /tmp/obrix-preview.log 2>&1 &
+    - sleep 3
+    - node tests/smoke.mjs
+    - npm run test:e2e
+  artifacts:
+    when: always
+    paths: [dist/, playwright-report/, test-results/]
+    reports:
+      junit: test-results/results.xml
+    expire_in: 1 week
+
+publish-obrix:
+  stage: deploy
+  dependencies: []
+  resource_group: obrix-pages
+  timeout: 15 minutes
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "build/obrix-connected-frontend" || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  script:
+    - npm install --no-audit --no-fund
+    - node scripts/build-pages.mjs
+    - PAGES_TEST_BASE="$(node -p 'new URL(process.env.CI_PAGES_URL).pathname.replace(/\/?$/, "/")')" npx playwright test tests/pages.spec.js
+    - echo "OBRIX deployment target is $CI_PAGES_URL"
+  pages:
+    publish: dist
+    expire_in: never
+  environment:
+    name: obrix-preview
+    url: $CI_PAGES_URL
+  artifacts:
+    when: always
+    paths: [dist/, playwright-report/, test-results/]
+    expire_in: 1 week
